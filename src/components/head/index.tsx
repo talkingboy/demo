@@ -7,7 +7,7 @@ const Head: React.FunctionComponent = () => {
     <header>
       <div>
         <div className="logo">
-          <img src={logo} />
+          <img src={logo} alt="logo"/>
         </div>
         <nav>
           <ul>
