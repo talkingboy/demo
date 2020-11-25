@@ -89,3 +89,7 @@ npm i -s react-router react-router-dom
 2.如果是使用的ts，还需要安装ts相关的包
 npm i -s @types/react-router @types/react-router-dom
 3.在需要使用路由的地方使用Router，BrowserRouter，HashRouter，当前项目使用的是BrowserRouter，可以查看App.tsx
+
+### 关于node-sass
+npm i node-sass 报错时使用以下命令安装即可
+npm install --save node-sass --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
