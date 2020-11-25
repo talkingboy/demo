@@ -4,6 +4,7 @@ import { GlobalState } from "../../redux/state";
 import { Dispatch } from "redux";
 import { setTestValue } from "../../redux/actions";
 import { Button } from "element-react"
+import Head from "../../components/head";
 const styles = require("./style.module.scss");
 
 type TProps = {
@@ -17,6 +18,7 @@ const Layout: React.FunctionComponent<TProps> = ({
 }: TProps) => {
   return (
     <>
+      <Head></Head>
       <div className={styles["test"]}>{value}</div>
       <Button type="primary" onClick={() => setTestValue(444)}>1234</Button>
     </>
