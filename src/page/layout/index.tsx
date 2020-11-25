@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import { GlobalState } from "../../redux/state";
 import { Dispatch } from "redux";
 import { setTestValue } from "../../redux/actions";
-
+import { Button } from "element-react"
 const styles = require("./style.module.scss");
 
 type TProps = {
-  setTestValue: (value: number) => void;
+  setTestValue: (value: number) => void; // 默认值
   value: number;
 };
 
@@ -18,7 +18,7 @@ const Layout: React.FunctionComponent<TProps> = ({
   return (
     <>
       <div className={styles["test"]}>{value}</div>
-      <div onClick={() => setTestValue(444)}>1234</div>
+      <Button type="primary" onClick={() => setTestValue(444)}>1234</Button>
     </>
   );
 };

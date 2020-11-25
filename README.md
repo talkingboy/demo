@@ -93,3 +93,12 @@ npm i -s @types/react-router @types/react-router-dom
 ### 关于node-sass
 npm i node-sass 报错时使用以下命令安装即可
 npm install --save node-sass --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
+
+### 引入element UI
+npm i element-react --save
+
+### element UI 默认主题
+npm install element-theme-default --save
+
+### 页面按需引入
+import { Button } from 'element-react';
