@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { GlobalState } from "../../redux/state";
 import { Dispatch } from "redux";
 import { setTestValue } from "../../redux/actions";
+import Head from "../../components/head";
 
 const styles = require("./style.module.scss");
 
@@ -17,6 +18,7 @@ const Layout: React.FunctionComponent<TProps> = ({
 }: TProps) => {
   return (
     <>
+      <Head></Head>
       <div className={styles["test"]}>{value}</div>
       <div onClick={() => setTestValue(444)}>1234</div>
     </>
