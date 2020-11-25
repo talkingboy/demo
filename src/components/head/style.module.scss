@@ -1,0 +1,29 @@
+@import "../../tools/common.scss";
+header {
+  @include flex-layout($justify: space-between);
+  min-width: 960px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 3px 0 #f5f5f5;
+  .left {
+    @include flex-layout();
+    .logo {
+      height: 60px;
+      width: 156px;
+      > img {
+        height: 42px;
+        padding: 9px 0;
+        margin: 0 auto;
+      }
+    }
+    > nav > ul {
+      @include flex-layout();
+      padding: 0;
+      margin: 0 0 0 20px;
+      li {
+        list-style: none;
+        line-height: 60px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
