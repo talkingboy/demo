@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### react引入ts
+
+1、全局安装ts
+npm i -g typescript
+2、创建tsconfig.json
+tsc --init
+修改tsconfig.json，开启jsx和allowJs配置，
+3、安装开发环境依赖
+npm install --save-dev typescript @types/react @types/react-dom ts-loader
+4、修改js文件为ts，修改jsx为tsx
+5、增加tsconfig文件配置==>"jsx": "react",
+6、根据报错位置的提示信息，修改报错的ts和tsx文件
+
+### react引入router
+
+1.安装路由核心包和web包
+npm i -s react-router react-router-dom
+2.如果是使用的ts，还需要安装ts相关的包
+npm i -s @types/react-router @types/react-router-dom
+3.在需要使用路由的地方使用Router，BrowserRouter，HashRouter，当前项目使用的是BrowserRouter，可以查看App.tsx
