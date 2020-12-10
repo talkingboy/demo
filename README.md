@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -102,3 +104,41 @@ npm install element-theme-default --save
 
 ### 页面按需引入
 import { Button } from 'element-react';
+
+### redux引入
+1.安装redux以及redux相关的ts解析插件
+npm install -S redux react-redux @types/react-redux
+2.创建redux/index文件
+1).创建store
+const store = createStore(reducer);
+2).创建reducer
+创建redux/reducer文件
+```
+const reducer = (state: TState = initState, action: AnyAction): TState => {
+  switch (action.type) {
+    case 'SET_TEST': {
+      return { ...state, test: action.payload };
+    }
+    default: {
+      return state;
+    }
+  }
+};
+export default reducer;
+```
+3.在index.tsx中注入store
+<Provider store={store}></Provider>
+4.在fun组件中使用
+```
+// 初始化时缓存映射关系函数
+const mapState = useCallback((state) => {
+  return {
+    test: state.test, // 获取 hookData 的 数据
+  };
+}, []);
+// 获取state
+const { test } = useMappedState(mapState);
+const dispatch = useDispatch();
+```
+5.在class组件中使用
+通过connect函数将dispatch方法和state的状态注入到props中
