@@ -12,7 +12,6 @@
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",

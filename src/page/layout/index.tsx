@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Button } from 'element-react';
 import { useDispatch, useMappedState } from 'redux-react-hook';
+import { setTest } from '../../redux/actions';
 const styles = require('./style.module.scss');
 
 type TProps = {};
@@ -24,7 +25,7 @@ const Layout: React.FunctionComponent<TProps> = () => {
         1234
       </Button>
       <div className={styles['test']}>{test}</div>
-      <Button type='primary' onClick={() => dispatch({ type: 'setTest', payload: test + 1 })}>
+      <Button type='primary' onClick={() => dispatch(setTest(test + 1))}>
         redux
       </Button>
     </>

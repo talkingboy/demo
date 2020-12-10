@@ -7,7 +7,7 @@ const initState = {
 
 const reducer = (state: TState = initState, action: AnyAction): TState => {
   switch (action.type) {
-    case 'setTest': {
+    case 'SET_TEST': {
       return { ...state, test: action.payload };
     }
     default: {
