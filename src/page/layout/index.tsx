@@ -26,6 +26,7 @@ const Layout: React.FunctionComponent<TProps> = () => {
       <Button type='primary' onClick={() => dispatch(setTest(test + 1))}>
         redux
       </Button>
+      <div className='iconfont'>&#xe858;</div>
       <div className={styles['test']}>{asyncTest}</div>
       <Button type='primary' onClick={() => dispatch(requestTest(asyncTest + 1))}>
         redux

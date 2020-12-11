@@ -1,4 +1,4 @@
-import { call, delay, put, takeEvery } from 'redux-saga/effects';
+import { delay, put, takeEvery } from 'redux-saga/effects';
 import { responseTest } from './actions';
 import { TAction } from './tools';
 
