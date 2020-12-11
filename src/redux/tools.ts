@@ -4,7 +4,7 @@
  * @Date: 2020/12/10 16:33
  */
 
-type TAction<T> = {
+export type TAction<T> = {
   type: string;
   payload: T;
 };
