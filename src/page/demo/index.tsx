@@ -34,14 +34,22 @@ const Demo: React.FunctionComponent = () => {
 
   const dijkstra = (map: number[][]) => {
     // 设置初始值
+    // 缓存当前起始点到所有点最短路径信息
     const catchList: { len: number; through: number[] }[] = map[0].map((item) => ({ len: item, through: [] }));
+    // 存储被访问过的点
     const visited = [];
+    // 遍历图
     for (let i = 0; i < map.length; i++) {
+      // 寻找起始点能到达的点中最短的一个
       const m = findMin(catchList, visited);
       visited[m] = true;
       for (let j = 0; j < map[i].length; j++) {
+        // 若起始点到当前点的距离大于起始点到M点中转再到当前点的距离，则使用后者替换起始点到当前点的距离
+        // 使用<=是为了可以添加当前点本身到through数组中，如不需要则使用<
         if (catchList[m].len + map[m][j] <= catchList[j].len) {
+          // 更新距离
           catchList[j].len = catchList[m].len + map[m][j];
+          // 增加中转节点
           catchList[j].through.push(m);
         }
       }
