@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import icon from '../../assets/imgs/demo.png';
 
 const Demo: React.FunctionComponent = () => {
+  // 测试图1
   const map1 = [
     [0, 5, 2, 6, Infinity],
     [Infinity, 0, Infinity, Infinity, 1],
@@ -10,6 +11,7 @@ const Demo: React.FunctionComponent = () => {
     [Infinity, Infinity, Infinity, Infinity, 0],
   ];
 
+  // 测试图2
   const map2 = [
     [0, 4, Infinity, 2, Infinity],
     [4, 0, 4, 1, Infinity],
